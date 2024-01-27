@@ -14,7 +14,7 @@
         position: absolute;
         top: 5rem;
         left: 0;
-        width: 100%;
+        width: calc(100% - 4rem);
         list-style: none;
         background-color: $black;
         height: 0;
@@ -104,7 +104,7 @@
 
     &__logo {
         width: 350px;
-        padding: 2rem 5rem;
+        padding: 2rem 0rem;
         border-bottom: 2px solid $dark-grey;
     }
 
@@ -140,7 +140,13 @@
     }
 
     .header {
-        padding: 0 1rem;
+        padding: 2rem;
+        
+        &__navigation {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
 
         &__hamburger {
             display: none;
@@ -150,12 +156,11 @@
             position: relative;
             height: auto;
             display: flex;
+            justify-content: end;
             top: unset;
             left: unset;
             background-color: transparent;
             padding: 0;
-
-
         }
 
         &__navigation-item {
@@ -216,11 +221,10 @@
     }
     
     .header {
-        padding: 0 5rem;
+        padding: 2rem 3rem;
     }
 
     .footer {   
-
         &__bottom {
             margin-top: -7rem;
         }
