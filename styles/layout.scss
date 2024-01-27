@@ -1,0 +1,261 @@
+@import "../styles/variables.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+
+    &__logo {
+        width: 200px;
+    }
+
+    &__navigation-list {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        width: calc(100% - 4rem);
+        list-style: none;
+        background-color: $black;
+        height: 0;
+        overflow: hidden;
+        z-index: 100;
+
+        &.open {
+            height: auto;
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__navigation-item {
+        padding: 1rem 0;
+
+        .header__navigation-link {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__hamburger {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+        background-image: url("../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg");
+        background-size: 200%;
+        background-color: $peach;
+        padding: 5rem 3rem;
+        text-align: center;
+        color: $white;
+        margin: 0 2rem;
+        border-radius: 20px;
+        z-index: 2;
+
+        .heading {
+            margin: 0;
+        }
+
+        .footer_text {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__bottom {
+        padding: 20rem 3rem 5rem 3rem;
+        margin-top: -15rem;
+        background-color: $black;
+        text-align: center;
+        color: $grey;
+
+        .footer__navigation {
+            &-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            &-item {
+                color: $white;
+                padding: 1rem;
+                font-size: 1.25rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
+            &-link {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__logo {
+        width: 350px;
+        padding: 2rem 0rem;
+        border-bottom: 2px solid $dark-grey;
+    }
+
+    &_subheading {
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    &_text {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+//landscape phones
+@media only screen and (min-width: 480px) { 
+    //TODO: remove 
+    body::before {
+        content: "Landscape phone";
+        position: absolute;
+        background-color: black;
+        color: white;
+        left: 50%;
+    }
+}
+
+ //tablet
+@media only screen and (min-width: 768px) { 
+    //TODO: remove 
+    body::before {
+        content: "Tablet";
+    }
+
+    .header {
+        padding: 2rem;
+        
+        &__navigation {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__navigation-list {
+            position: relative;
+            height: auto;
+            display: flex;
+            justify-content: end;
+            top: unset;
+            left: unset;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        &__navigation-item {
+            padding: 1rem;
+    
+            .header__navigation-link {
+                color: $black;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .footer {
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+
+            &-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &:first-of-type {
+                    padding-bottom: 1rem;
+                    border-bottom: 2px solid $dark-grey;
+                }
+            }
+        }
+
+        &__navigation {
+            &-list {
+                display: flex;
+            }
+
+            &-link {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__logo {
+            width: 200px;
+            padding: 0;
+            border: 0;
+        }
+
+        &__address {
+            text-align: left;
+        }
+
+        &__contact {
+            text-align: right;
+        }
+    }
+ }
+
+ //desktop
+@media only screen and (min-width: 992px){ 
+    //TODO: remove 
+    body::before {
+        content: "Desktop";
+    }
+    
+    .header {
+        padding: 2rem 3rem;
+    }
+
+    .footer {   
+        &__bottom {
+            margin-top: -7rem;
+        }
+
+        &__top {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            text-align: left;
+            padding: 2rem 3rem;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        &__heading {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        &__text {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        &__button {
+            grid-area: 1 / 2 / 3 / 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
