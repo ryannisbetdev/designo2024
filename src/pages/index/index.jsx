@@ -1,14 +1,14 @@
-import friendlyIllustration from '../../assets/home/desktop/illustration-friendly.svg';
-import passionateIllustration from '../../assets/home/desktop/illustration-passionate.svg';
-import resourcefulIllustration from '../../assets/home/desktop/illustration-resourceful.svg';
-import heroImage from '../../assets/home/desktop/image-hero-phone.png';
+import friendlyIllustration from '../../assets/home/illustration-friendly.svg';
+import passionateIllustration from '../../assets/home/illustration-passionate.svg';
+import resourcefulIllustration from '../../assets/home/illustration-resourceful.svg';
+import heroImage from '../../assets/home/image-hero-phone.png';
 
 import '../index/index.scss';
 
 const IndexPage = () => {
     return (
-        <div className="pageWrap pageWrap__homepage">
-            <section className="hero">
+        <>
+            <section className="hero hero--homepage">
                 <div className="hero__content">
                     <h1 className="hero__heading heading">Award-winning custom designs and digital branding solutions</h1>
                     <p className="hero__text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
@@ -22,18 +22,24 @@ const IndexPage = () => {
 
             <section className="services">
                 <div className="services__item services__item--web">
-                    <h2 className="services__heading heading">Web Design</h2>
-                    <a href="/" className="services__link">View projects</a>
+                    <div className="services__overlay">
+                        <h2 className="services__heading heading">Web Design</h2>
+                        <a href="/webdesign" className="services__link">View projects</a>
+                    </div>
                 </div>
 
                 <div className="services__item services__item--app">
-                    <h2 className="services__heading heading">App Design</h2>
-                    <a href="/" className="services__link">View projects</a>
+                    <div className="services__overlay">
+                        <h2 className="services__heading heading">App Design</h2>
+                        <a href="/appdesign" className="services__link">View projects</a>
+                    </div>
                 </div>
 
                 <div className="services__item services__item--graphic">
-                    <h2 className="services__heading heading">Graphic Design</h2>
-                    <a href="/" className="services__link">View projects</a>
+                    <div className="services__overlay">
+                        <h2 className="services__heading heading">Graphic Design</h2>
+                        <a href="/graphicdesign" className="services__link">View projects</a>
+                    </div>  
                 </div>
 
             </section>
@@ -63,7 +69,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
