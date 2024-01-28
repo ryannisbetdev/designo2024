@@ -16,7 +16,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            <img className="header__logo" src = {Logo} alt = "Designo logo"/>
+            <a href="/" className="header__logo-link"> 
+                <img className="header__logo" src = {Logo} alt ="Designo logo"/>
+            </a>
             <nav className={"header__navigation"}>
                 <button onClick={toggleMenu} className="header__hamburger material-symbols-outlined"> {isMenuOpen ? 'close' : 'menu'} </button>
                 <ul className={`header__navigation-list ${isMenuOpen ? 'open' : ''}`}> 
