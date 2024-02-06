@@ -10,6 +10,8 @@ import Index from './pages/index/index.jsx';
 import WebPage from './pages/web/web.jsx';
 import GraphicsPage from './pages/graphics/graphics.jsx';
 import AppPage from './pages/app/app.jsx';
+import AboutUs from './pages/about/about.jsx';
+import Locations from './pages/locations/locations.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/webdesign" element={<WebPage />}></Route>
           <Route path="/graphicdesign" element={<GraphicsPage />}></Route>
           <Route path="/appdesign" element={<AppPage />}></Route>
+          <Route path="/company" element={<AboutUs />}></Route>
+          <Route path="/locations" element={<Locations />}></Route>
         </Routes>
       </div>
       <Footer />
