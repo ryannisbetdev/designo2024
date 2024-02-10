@@ -1,4 +1,4 @@
-import Logo from "../../assets/shared/desktop/logo-light.png";
+import Logo from "../../assets/shared//logo-light.png";
 
 const Footer = () => {
     return (
