@@ -10,19 +10,19 @@ const Locations = () => {
             <div className="locations__item">
                 <img src={CanadaImage} alt="Canada" />
                 <h2 className="locations__heading heading">Canada</h2>
-                <button className="btn btn--dark">See Location</button>
+                <a className="btn btn--dark" href="/locations">See Location</a>
             </div>
 
             <div className="locations__item">
                 <img src={AustraliaImage} alt="Australia" />
                 <h2 className="locations__heading heading">Australia</h2>
-                <button className="btn btn--dark">See Location</button>
+                <a className="btn btn--dark" href="/locations">See Location</a>
             </div>
 
             <div className="locations__item">
                 <img src={UKImage} alt="United Kingdom" />
                 <h2 className="locations__heading heading">United Kingdom</h2>
-                <button className="btn btn--dark">See Location</button>
+                <a className="btn btn--dark" href="/locations">See Location</a>
             </div>
         </div>
 

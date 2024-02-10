@@ -7,7 +7,7 @@ const Footer = () => {
                 <h1 className="footer__heading heading">Let's talk about your project</h1>
                 <p className="footer_text">Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                 <div className="footer__button">
-                    <button className="btn">Get in touch</button>
+                <a className="btn" href="/contact">Get in touch</a>
                 </div>
             </section>
 

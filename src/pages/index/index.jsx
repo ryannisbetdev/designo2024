@@ -12,9 +12,7 @@ const IndexPage = () => {
                 <div className="hero__content">
                     <h1 className="hero__heading heading">Award-winning custom designs and digital branding solutions</h1>
                     <p className="hero__text">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                    <div className="hero__button">
-                        <button className="btn">Learn more</button>
-                    </div>
+                    <a className="btn" href="/company">Learn more</a>
                 </div>
 
                 <img className="hero__img" src={heroImage} alt="hero image" />

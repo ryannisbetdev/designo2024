@@ -3,10 +3,16 @@
 .hero--homepage {
     height: 900px;
 
-    .hero__img {
+    .hero {
+        &__img {
         margin-block-start: -6rem;
         z-index: -1;
         pointer-events: none;
+        }
+
+        &__text {
+            margin-block-end: 3rem;
+        }
     }
 }
 

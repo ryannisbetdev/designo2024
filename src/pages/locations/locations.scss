@@ -5,7 +5,7 @@
     &__section {
         display: flex;
         flex-direction: column-reverse;
-        margin-bottom: 3rem;
+        margin-block-end: 3rem;
     }
 
     &__textWrap {
@@ -35,7 +35,7 @@
         &__section {
             display: flex;
             flex-direction: column-reverse;
-            margin-bottom: 2rem;
+            margin-block-end: 2rem;
             padding: 2rem;
             gap: 2rem;
         }
