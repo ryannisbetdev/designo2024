@@ -1,6 +1,6 @@
-import CanadaImage from '../../assets/shared/desktop/illustration-canada.svg';
-import AustraliaImage from '../../assets/shared/desktop/illustration-australia.svg';
-import UKImage from '../../assets/shared/desktop/illustration-united-kingdom.svg';
+import CanadaImage from '../../assets/shared/illustration-canada.svg';
+import AustraliaImage from '../../assets/shared/illustration-australia.svg';
+import UKImage from '../../assets/shared/illustration-united-kingdom.svg';
 
 import '../../styles/common.scss';
 

@@ -1,0 +1,83 @@
+// Import variables
+@import '../../styles/variables.scss';
+
+.locations {
+    &__section {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 3rem;
+    }
+
+    &__textWrap {
+        background-image: url('../../assets/shared/bg-pattern-two-circles.svg');
+        background-size: 150%;
+        background-color: $lightest-peach;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__heading {
+        text-transform: unset;
+        font-size: 2.5rem;
+        letter-spacing: normal;
+        font-weight: 500;
+        color: $peach;
+    }
+
+    &__subheading {
+        font-weight: 600;
+    }
+}
+
+ //tablet
+@media only screen and (min-width: 768px) {
+    .locations {
+        &__section {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            gap: 2rem;
+        }
+    
+        &__textWrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 2fr;
+            background-image: url('../../assets/shared/bg-pattern-two-circles.svg');
+            background-size: 50%;
+            padding: 0 3rem;
+            font-size: 1.25rem;
+            border-radius: 20px;
+        }
+    
+        &__heading {
+            grid-area: 1 / 1 / 2 / 3; 
+        }
+
+        &__img {
+            border-radius: 20px;
+        }
+    }
+}
+
+// Large desktop
+@media only screen and (min-width: 1700px){
+    .locations {
+        &__section {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 1rem;
+
+            &.australia {
+                flex-direction: row-reverse;
+            }
+                
+        }
+    
+        &__textWrap {
+            width: 50%;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import '../../styles/layout.scss';
 import { useState } from 'react';
-import Logo from '../../assets/shared/desktop/logo-dark.png'
+import Logo from '../../assets/shared/logo-dark.png'
 
 
 /**

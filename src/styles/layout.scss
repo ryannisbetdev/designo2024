@@ -19,7 +19,6 @@
         background-color: $black;
         height: 0;
         overflow: hidden;
-        z-index: 100;
 
         &.open {
             height: auto;
@@ -53,8 +52,8 @@
     flex-direction: column;
 
     &__top {
-        background-image: url("../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg");
-        background-size: 200%;
+        background-image: url("../assets/shared/bg-pattern-small-circle.svg");
+        background-size: 50%;
         background-color: $peach;
         padding: 5rem 3rem;
         text-align: center;
@@ -103,7 +102,7 @@
     }
 
     &__logo {
-        width: 350px;
+        width: 300px;
         padding: 2rem 0rem;
         border-bottom: 2px solid $dark-grey;
     }
@@ -119,24 +118,10 @@
 
 }
 
-
-//landscape phones
-@media only screen and (min-width: 480px) { 
-    //TODO: remove 
-    body::before {
-        content: "Landscape phone";
-        position: absolute;
-        background-color: black;
-        color: white;
-        left: 50%;
-    }
-}
-
- //tablet
+// Tablet
 @media only screen and (min-width: 768px) { 
-    //TODO: remove 
-    body::before {
-        content: "Tablet";
+    .pageWrap {
+        padding: 0 2rem;
     }
 
     .header {
@@ -169,11 +154,20 @@
             .header__navigation-link {
                 color: $black;
                 font-size: 1.25rem;
+
+                &:hover {
+                    color: $peach;
+                }
             }
         }
     }
 
     .footer {
+        &__top {
+            background-size: 30%;
+            padding: 4rem 0;
+        }
+
         &__bottom {
             display: flex;
             flex-direction: column;
@@ -206,22 +200,24 @@
             border: 0;
         }
 
-        &__contact,
         &__address {
             text-align: left;
+        }
+
+        &__contact {
+            text-align: right;
         }
     }
  }
 
  //desktop
-@media only screen and (min-width: 992px){ 
-    //TODO: remove 
-    body::before {
-        content: "Desktop";
+@media only screen and (min-width: 1280px){ 
+    .pageWrap {
+        padding: 0 10rem;
     }
     
     .header {
-        padding: 2rem 3rem;
+        padding: 2rem 10rem;
     }
 
     .footer {   
@@ -234,9 +230,10 @@
             grid-template-columns: 2fr 1fr;
             grid-template-rows: repeat(2, 1fr);
             text-align: left;
-            padding: 2rem 3rem;
+            padding: 4rem 3rem;
             width: 70%;
             margin: 0 auto;
+            background-size: 20%;
         }
 
         &__heading {

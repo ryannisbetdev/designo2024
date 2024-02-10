@@ -1,6 +1,6 @@
-import HeroImg from '../../assets/about/desktop/image-about-hero.jpg';
-import ValuesImg from '../../assets/about/desktop/image-world-class-talent.jpg';
-import RealDealImg from '../../assets/about/desktop/image-real-deal.jpg';
+import HeroImg from '../../assets/about/image-about-hero.jpg';
+import ValuesImg from '../../assets/about/image-world-class-talent.jpg';
+import RealDealImg from '../../assets/about/image-real-deal.jpg';
 import Locations from '../../components/layout/locations';
 import Hero from '../../components/layout/hero';
 import './about.scss';

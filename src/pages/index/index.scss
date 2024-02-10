@@ -1,9 +1,13 @@
 @import "../../styles/variables.scss";
 
-.hero--homepage__img {
-    margin-top: -6rem;
-    z-index: -1;
-    pointer-events: none;
+.hero--homepage {
+    height: 900px;
+
+    .hero__img {
+        margin-block-start: -6rem;
+        z-index: -1;
+        pointer-events: none;
+    }
 }
 
 .services {
@@ -62,7 +66,7 @@
     text-align: center;
 
     &__img {
-        margin-top: -6rem;
+        margin-block-start: -6rem;
     }
 
     &__heading {
@@ -77,8 +81,8 @@
         font-size: 1.25rem;
     }
 }
-
- //tablet
+ 
+// Tablet
 @media only screen and (min-width: 768px) { 
     .hero--homepage {
         border-radius: 20px;
@@ -110,8 +114,19 @@
     }
 }
 
- //desktop
-@media only screen and (min-width: 992px) { 
+// Desktop
+@media only screen and (min-width: 1280px) { 
+
+    .hero--homepage {
+        padding: 5rem 4rem;
+        
+        .hero__img {
+            margin-block: unset -20rem;
+            z-index: 10;
+            pointer-events: none;
+        }
+    }
+    
     .services {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -119,7 +134,7 @@
         gap: 2rem;
 
         &__heading {
-            margin-bottom: 1rem;
+            margin-block-end: 1rem;
         }
 
         &__item {
@@ -181,7 +196,7 @@
 }
 
 
- //large desktop
+// Large desktop
  @media only screen and (min-width: 1440px) { 
 
     .hero--homepage {

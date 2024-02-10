@@ -1,5 +1,7 @@
+// Import variables
 @import 'variables.scss';
 
+// Base styles
 * {
     font-family: $font-family;
 }
@@ -12,6 +14,7 @@ body {
     display: none !important;
 }
 
+// Button styles
 .btn {
     padding: 1.25rem 2rem;
     text-transform: uppercase;
@@ -30,9 +33,11 @@ body {
     &:hover {
         cursor: pointer;
         background-color: $light-peach;
+        color: $white;
     }
 }
 
+// Heading styles
 .heading {
     font-weight: 500;
     letter-spacing: 2px;
@@ -43,26 +48,225 @@ body {
     }
 }
 
+// Form styles
 .form {
-    &--label {
+    &__label {
         display: none;
     }
 
-    &--input {
+    &__error {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &:after {
+            content: '!';
+            color: $peach;
+            background-color: $white;
+            border-radius: 50%;
+            padding: .15rem .7rem;
+            display: inline-flex;
+            margin-left: 1rem;
+            font-weight: 800;
+        }
+    }
+
+    &__input {
         background-color: transparent;
         border: 0;
-        border-bottom: 1px solid $grey;
+        border-bottom: 2px solid $grey;
         color: $white;
-        padding: .25rem;
+        padding: 1rem .25rem;
+        width: 100%;
+        resize: none;
+        position: relative;
 
         &::placeholder {
-            color: $grey;
-            
+            color: $white;
+            font-size: 1rem;
+            opacity: .75;
         }
 
         &:focus {
             outline: none;
             border-color: $white;
+        }
+    }
+}
+
+// Hero styles
+.hero {
+    background-image: url('../assets/shared/bg-pattern-small-circle.svg');
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: -10% 10%;
+    background-color: $peach;
+    color: $white;
+    text-align: center;
+    padding: 5rem 2rem;
+    overflow: hidden;
+
+    &__text {
+        font-size: 1.5rem;
+    }
+}
+
+// Card styles
+.card {
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 2rem;
+    background-color: $lightest-peach;
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    &__text-container {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__heading {
+        margin: .5rem;
+        color: $peach;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
+
+// Services container styles
+.services__container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;  
+
+    .services__item {
+        width: auto;
+
+        &.services__item--web {
+            .services__overlay {
+                padding: 6rem 2rem;
+            }
+        }
+    }
+}
+
+// Location styles 
+.locations {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    &__heading {
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+// Tablet styles
+@media only screen and (min-width: 768px) {
+    .hero {
+        width: calc(100% - 10rem);
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .card {
+        display: flex;
+
+        &__img {
+            width: 50%;
+        }
+
+        &__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .services__container {
+        gap: 2rem;
+        flex-direction: row;
+
+        .services__item {
+            width: 500px;
+        }
+    }
+}
+
+// Desktop styles
+@media only screen and (min-width: 1280px) {
+    .hero {
+        background-size: 80%;
+        background-position: 120% 30%;
+    }
+
+    .card {
+        flex-direction: column;
+        width: 300px;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__container {
+            justify-content: space-evenly;
+            padding: 2rem 0;
+        }
+    }
+
+    .services__container.services {
+        display: flex;
+        justify-content: space-evenly;
+
+        .services__item {
+            width: 700px;
+        }
+    }
+
+}
+
+// Large desktop styles
+@media only screen and (min-width: 1440px) {
+    .card {
+        width: 400px;
+    }
+
+    .hero {
+        background-size: 30%;
+        background-position: 95% 30%;
+    }
+
+    // Location styles 
+    .locations {
+        &__container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-bottom: 2rem;
         }
     }
 }
